@@ -1,0 +1,239 @@
+
+/*
+ * Component: Social Widgets
+ * -------------------------
+ */
+.card-widget {
+  border: none;
+  position: relative;
+}
+
+.widget-user .widget-user-header {
+  padding: 1rem;
+  width: 100%;
+  height: 450px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.widget-user .widget-user-username {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 300;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.widget-user .widget-user-desc {
+    text-align: center;
+    margin-top: 0;
+}
+
+.widget-user .widget-user-image {
+  z-index: 2;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.widget-user .widget-user-image > img {
+  width: 180px;
+  height: 180px;
+  border: 3px solid #ffffff;
+}
+
+.widget-user .card-footer{
+    position: absolute;
+    bottom: 4px;
+    text-align: center;
+    background-color: #52515042;
+    color: wheat;
+    width: -webkit-fill-available;
+}
+.widget-user .card-footer .description span a {
+  text-decoration: none;
+  color: wheat !important;
+}
+.widget-user .card-footer .description span a:hover {
+  text-decoration: none;
+  color: rgb(71, 185, 90);
+}
+
+.widget-user .card-footer .description {
+        display: inline-block;
+        padding: 0px 20px;
+}
+
+/* LOGO BUSINESS upload */
+.widget-user .img-relatives {
+  /* z-index: 2;
+  position: absolute; */
+  top: 0px;
+  /* left: 50%; */
+}
+
+.widget-user .img-relatives .profile-upload {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.widget-user .img-relatives .profile-upload > img {
+  width: 180px;
+  height: 180px;
+  border: 3px solid #ffffff;
+}
+
+
+/* profile upload */
+.widget-user .img-relative {
+  z-index: 2;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.widget-user .img-relative .profile-upload {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.widget-user .img-relative .profile-upload > img {
+  width: 180px;
+  height: 180px;
+  border: 3px solid #ffffff;
+}
+
+.widget-user .img-upload-iconLinks {
+  z-index: 2;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+  /* top: 45%;
+  left: 32%; */
+}
+
+.widget-user .img-upload-iconLinks i {
+  cursor: pointer;
+  font-size:60px;
+  color: rgb(224, 63, 63);
+}
+
+.widget-user .img-upload-iconLinks i:hover {
+  color: rgb(155, 132, 132);
+}
+
+.widget-user .profile-upload .img-placeholder {
+  width: 182px;
+  color: white;
+  height: 100%;
+  background: black;
+  opacity: .7;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  left: 46.5%;
+  transform: translateX(-50%);
+  display: none;
+  border: 2px solid black;
+}
+
+.widget-user .profile-upload .img-placeholder h4 {
+  /* margin-top: 30%; */
+  margin-top: 50%;
+  color: white;
+}
+
+.widget-user .profile-upload:hover .img-placeholder {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* PROFILEeDIT COVER IMAGE */
+
+.img-cover-profileEdit {
+  width: 100%;
+  height: 450px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  overflow: hidden;
+}
+/* cover image */
+
+.img-cover-profileEdit .profile-upload >img {
+  position: absolute;
+  background-size:100%;
+  z-index: 0;
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.img-cover-profileEdit .widget-user-usernames {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 300;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.img-cover-profileEdit .widget-user-descs {
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+}
+
+.img-cover-profileEdit .img-cover-iconLinks {
+  z-index: 3;
+  position: absolute;
+  top: 20%;
+  left: 80%;
+}
+
+.img-cover-profileEdit .img-cover-iconLinks i {
+  cursor: pointer;
+  font-size: 100px;
+  color: rgb(224, 63, 63);
+}
+
+.img-cover-profileEdit .img-cover-iconLinks i:hover {
+  color: rgb(155, 132, 132);
+}
+
+.img-cover-profileEdit .img-placeholders {
+  width: 100%;
+  color: white;
+  height: 100%;
+  min-height: 80%;
+  background: black;
+  opacity: .7;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  border: 2px solid black;
+}
+
+.img-cover-profileEdit .img-placeholders h1 {
+  font-size: 37px;
+  position: relative;
+  top: 3%;
+  color: white;
+}
+
+.img-cover-profileEdit:hover .img-placeholders{
+  display: inline-block;
+  cursor: pointer;
+}
+/*end  cover image */

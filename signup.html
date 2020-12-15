@@ -1,0 +1,253 @@
+
+<html>
+<head>
+
+<style>
+    /*---------------------
+  Header
+-----------------------*/
+
+.canvas-open {
+	display: none;
+}
+.offcanvas-menu-wrapper {
+	display: none;
+}
+.header-section.header-normal .nav-logo {
+	position: relative;
+	z-index: 9;
+	-webkit-box-shadow: 0 0 15px 5px rgba(44, 44, 44, 0.2);
+	box-shadow: 0 0 15px 5px rgba(44, 44, 44, 0.2);
+}
+
+/* property nav search */
+.property-nav {
+	background: #1c1c1c;
+	text-align: center;
+	margin-bottom: 25px
+}
+
+.main-menu ul li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 8px;
+}
+.property-nav .main-menu ul li:last-child {
+	margin-right: 0;
+}
+.property-nav .main-menu ul li.active a {
+	color: #2cbdb8;
+}
+.property-nav .main-menu ul li a {
+	/* font-size: 14px; */
+	color: #ffffff;
+	/* font-weight: 500; */
+	/* text-transform: uppercase; */
+	display: inline-block;
+	/* padding: 20px 0; */
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.property-nav .main-menu ul li a:hover {
+	color: #2cbdb8;
+}
+.property-nav .top-right {
+	text-align: right;
+}
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.container {
+    max-width: 1170px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+/* nav */
+
+.nav-logo .logo {
+	/* padding: 36px 0; */
+	padding: 9px 0;
+}
+.nav-logo .logo a {
+	display: inline-block;
+}
+.nav-logo .nav-logo-right {
+	text-align: right;
+}
+.nav-logo .nav-logo-right ul li {
+	list-style: none;
+	display: inline-block;
+	margin-left: 45px;
+	/* padding: 25px 0 25px; */
+	padding: 10px 0;
+}
+.nav-logo .nav-logo-right ul li i {
+	float: left;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	border: 2px solid #D5F2F1;
+	line-height: 45px;
+	color: #2cbdb8;
+	font-size: 20px;
+	margin-right: 14px;
+}
+.nav-logo .nav-logo-right ul li .info-text {
+	overflow: hidden;
+	text-align: left;
+}
+.nav-logo .nav-logo-right ul li .info-text span {
+	font-size: 14px;
+	color: #707079;
+	line-height: 15px;
+	display: inline-block;
+}
+.nav-logo .nav-logo-right ul li .info-text p {
+	color: #19191a;
+	margin-bottom: 0;
+	line-height: 18px;
+	margin-top: 4px;
+}
+.nav-logo .nav-logo-right ul li .info-text p span {
+	color: #707079;
+	font-size: 16px;
+}
+
+body{
+margin:0;
+color:#6a6f8c;
+background:#c8c8c8;
+/* font:600 16px/18px 'Open Sans',sans-serif; */
+}
+    .section_title h3 {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 52px;
+    color: #001D38;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 19px;
+}
+.mb-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.footer-text .footer-widgets h4 {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.footer-text .footer-widgets {
+    margin-bottom: 40px;
+}
+.footer-text .footer-widgets ul li a {
+    font-size: 14px;
+    color: #aaaab3;
+    line-height: 36px;
+}
+.footer-text .footer-widgets ul li i {
+    color: #2cbdb8;
+}
+.footer-text .footer-widgets ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.footer-text .footer-widgets ul.socials li {
+	position: relative;
+	padding-left: 28px;
+}
+.footer-text .footer-widgets ul.socials li i {
+	color: #aaaab3;
+	font-size: 18px;
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+.footer-text .footer-widgets ul.socials li a {
+	line-height: 40px;
+}
+.footer-text .footer-widgets ul.contact-options li {
+	font-size: 14px;
+	color: #aaaab3;
+	line-height: 36px;
+}
+.footer-text .footer-widgets ul.contact-options li i {
+	margin-right: 4px;
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: .5rem .5rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+h3 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-bottom: 8px;
+}
+.col-lg-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    width: 100%;
+}
+.col-lg-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+    width: 100%;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="content">
+
+<!-- Header End -->
+<div style="text-align: center;">
+<div style="background-color: blue;color: white;padding: 50px;">
+<h3> Welcome to irangiro</h3>
+
+<a class="btn" style="color: #fff;text-decoration: none;margin-top: 20px;" href="https://iragiro.com" role="button">LOG IN TO YOUR NEW ACCOUNT</a> 
+</div>
+
+<h4 style="color: blue;"> Your new account </h4> 
+
+<p>Login: {{name}}</p>
+<p>Email: {{email}}</p>
+<p>Username: {{username}}</p>
+<p>Password: {{password}}</p>
+
+</div> 
+<!-- popular_property -->
+
+
+</body>
+</html>

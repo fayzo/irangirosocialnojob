@@ -1,0 +1,194 @@
+/*
+ * Page: Mailbox
+ * -------------
+ */
+.mailbox-messages>.table {
+    margin: 0;
+}
+.card-body.p-0 .table tbody>tr>td:first-of-type {
+    padding-left: 1.5rem !important;
+}
+
+.card-header>.card-tools {
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+}
+.folders {
+    border-bottom: 5px #f2f3f5 solid;
+}
+
+.card-header>.card-tools [data-toggle="tooltip"] {
+    position: relative;
+}
+/*
+ * Component: Nav
+ * --------------
+ */
+.nav>li>a:hover,
+.nav>li>a:active,
+.nav>li>a:focus {
+    color: #444;
+    background: #f7f7f7;
+}
+
+/* NAV PILLS */
+.nav-pills>li>a {
+    border-radius: 0;
+    border-top: 3px solid transparent;
+    color: #444;
+}
+
+.nav-pills>li>a>.fa,
+.nav-pills>li>a>.glyphicon,
+.nav-pills>li>a>.ion {
+    margin-right: 5px;
+}
+
+.nav-pills>li.active>a {
+    font-weight: 600;
+}
+/* NAV STACKED */
+.nav-stacked>li>a {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 3px solid transparent;
+    color: #444;
+}
+
+.nav-stacked>li.active>a,
+.nav-stacked>li.active>a:hover {
+    background: transparent;
+    color: #444;
+    border-top: 0;
+    border-left-color: #3c8dbc;
+}
+
+.nav-stacked>li.header {
+    border-bottom: 1px solid #ddd;
+    color: #777;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+/* NAV STACKED */
+
+.mailbox-controls {
+    padding: 5px;
+}
+
+.mailbox-controls.with-border {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.mailbox-read-info {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 10px;
+}
+
+.mailbox-read-info h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.mailbox-read-info h5 {
+    margin: 0;
+    padding: 5px 0 0 0;
+}
+
+.mailbox-read-time {
+    color: #999;
+    font-size: 13px;
+}
+
+.mailbox-read-message {
+    padding: 10px;
+}
+
+.mailbox-attachments li {
+    /* float: left; */
+    width: 200px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.mailbox-attachment-name {
+    font-weight: bold;
+    color: #f3f2f2;
+}
+
+.mailbox-attachment-icon,
+.mailbox-attachment-info,
+.mailbox-attachment-size {
+    display: block;
+}
+
+.mailbox-attachment-info {
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+.mailbox-attachment-size {
+    color: #f3f2f2;
+    font-size: 12px;
+}
+
+.mailbox-attachment-icon {
+    text-align: center;
+    font-size: 65px;
+    color: #666;
+    padding: 20px 10px;
+}
+
+.mailbox-attachment-icon.has-img {
+    padding: 0;
+}
+
+.mailbox-attachment-icon.has-img>img {
+    max-width: 100%;
+    height: auto;
+}
+.list-unstyled,
+.chart-legend,
+.contacts-list,
+.users-list,
+.mailbox-attachments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn.btn-file>input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    outline: none;
+    background: #ddd;
+    cursor: inherit;
+    display: block;
+}
+
+.btn-defaults {
+    background-color: #dce2e7;
+    color: rgb(20, 19, 19);
+    border-color: #ddd;
+}
+
+.btn-defaults:hover,
+.btn-defaults:active,
+.btn-defaults.hover {
+    background-color: #343a40;
+    color: #ddd;
+}

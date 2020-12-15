@@ -1,0 +1,160 @@
+/*
+ * Component: Direct Chat
+ * ----------------------
+ */
+.direct-chats {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    width: 300px;
+    z-index: 1200;
+    border-radius: 3px;
+    overflow-x: hidden;
+    padding: 0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    /* border: none */
+}
+.direct-chat .card-body {
+    position: relative;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.direct-chat.chat-pane-open .direct-chat-contacts {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.direct-chat-message {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: 250px;
+    overflow: auto;
+}
+
+
+.direct-chat-msg {
+    margin-bottom: 10px;
+}
+
+.direct-chat-msg::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.direct-chat-message,
+.direct-chat-contacts {
+    transition: transform .5s ease-in-out;
+}
+
+.direct-chat-img {
+    border-radius: 50%;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+.right .direct-chat-img {
+    float: right;
+}
+
+.direct-chat-info {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.875rem;
+}
+
+.direct-chat-name {
+    font-weight: 600;
+}
+
+.direct-chat-timestamp {
+    color: #999;
+}
+
+.direct-chat-contacts-open .direct-chat-contacts {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.direct-chat-contacts {
+    -webkit-transform: translate(101%, 0);
+    -ms-transform: translate(101%, 0);
+    transform: translate(101%, 0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* height: 280px; */
+    height: 100%;
+    width: 100%;
+    background: #222d32;
+    color: #ffffff;
+    overflow: auto;
+}
+
+.contacts-list>li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 0;
+}
+
+.contacts-list>li::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.contacts-list>li:last-of-type {
+    border-bottom: none;
+}
+
+.contacts-list-img {
+    border-radius: 50%;
+    width: 40px;
+    float: left;
+}
+.contacts-list-box {
+    border-radius: 50%;
+    float: left;
+    position: relative;
+}
+
+.contacts-list-info {
+    margin-left: 45px;
+    color: #ffffff;
+}
+
+.contacts-list-name,
+.contacts-list-status {
+    display: block;
+}
+
+.contacts-list-name {
+    font-weight: 600;
+}
+
+.contacts-list-status {
+    font-size: 0.875rem;
+}
+
+.contacts-list-date {
+    color: #aaa;
+    font-weight: normal;
+}
+
+.contacts-list-msg {
+    color: #999;
+}
+
+.card-header>.card-tools {
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+}

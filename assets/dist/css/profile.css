@@ -1,0 +1,618 @@
+.user-block:before,
+.user-block:after {
+    content: " ";
+    display: table;
+}
+
+.user-block:after {
+    clear: both;
+}
+.user-blockImgBorder{
+     float: left;
+     margin: 0px 5px 0px 0px;
+     border-radius: 50%;
+     border: 2px solid #e6dada;
+}
+.user-blockImg {
+    margin:2px;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.user-blockImg img {
+    /* position: relative;
+    top: -10px;
+    left: -10px; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-block .username,
+.user-block .description,
+.user-block .comment {
+    display: block;
+    margin-left: 50px;
+}
+
+.user-block .username {
+    /* font-size: 16px; */
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.user-block .description {
+    color: #999;
+    font-size: 13px;
+}
+
+.user-block.user-block-sm .username,
+.user-block.user-block-sm .description,
+.user-block.user-block-sm .comment {
+    margin-left: 40px;
+}
+
+.user-block.user-block-sm .username {
+    font-size: 14px;
+}
+/*
+ * Component: Users List
+ * ---------------------
+ */
+ 
+ .users-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.users-list>li {
+    width: 25%;
+    /* height: 25%; */
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+
+.users-list>li img {
+    border-radius: 50%;
+    max-width: 100%;
+    /* height: auto; */
+    height: 45px;
+}
+
+.users-list>li>a:hover,
+.users-list>li>a:hover .users-list-name {
+    color: #999;
+}
+
+.users-list-name,
+.users-list-date {
+    display: block;
+}
+
+.users-list-name {
+    font-size: 0.875rem;
+    color: #444;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.users-list-date {
+    color: #999;
+    font-size: 12px;
+}
+
+/* IMAGE JOBS HOVER */
+.jobHover:hover {
+    /* background: #999; */
+    background: #f6f6f6;
+}
+.jobHover:hover span {
+    /* background: #999; */
+    background: #f6f6f6;
+    color: #191717;
+}
+#black .jobHover:hover {
+    /* background: #999; */
+    background: #3a3636;
+}
+#black .jobHover:hover span {
+    /* background: #999; */
+    background: #3a3636;
+    color: #999;
+}
+/* profile home */
+.info-box {
+    width: 100%;
+    min-height: 170px;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    overflow: auto;
+    /* border: 1px solid #e3e3e3; */
+}
+#black .info-box {
+    background: #272323;
+}
+
+.info-inner {
+    overflow: hidden;
+}
+
+.info-in-head {
+    width: 100%;
+    background-color: #ececec;
+    background-size: cover;
+    /* border-bottom: 1px solid #e3e3e3; */
+    overflow: hidden;
+    height: 100px;
+}
+
+.info-in-head img {
+    width: 100%;
+}
+
+.info-in-body {
+    position: relative;
+    height: 70px;
+    top: -40px;
+}
+
+.in-b-img {
+    width: 70px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    height: 70px;
+    top: 15px;
+    left: 10px;
+    margin-right: 15px;
+}
+
+.in-b-img img {
+    border: 2px solid #d2d6de;
+    background-color: #ffffff;
+    padding: 3px;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+.info-body-name {
+    width: 75%;
+    position: relative;
+    top: 40px;
+    left: 8px;
+}
+
+.in-b-name div a {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+#black .in-b-name div a {
+    color: #c3bebe;
+}
+
+.in-b-name div a:hover {
+    text-decoration: underline;
+}
+
+.in-b-name span small a {
+    text-decoration: none;
+    color: #7D7D7D;
+    font-size: 12px;
+}
+
+.info-in-footer {
+    width: 100%;
+    position: relative;
+    top: -15px;
+}
+
+/*NUMBER WRAPPER*/
+
+.number-wrapper {
+    text-align: center;
+    width: 95%;
+    overflow: auto;
+    float: right;
+}
+
+.num-box {
+    width: 30%;
+    height: auto;
+    float: left;
+}
+
+.num-head a{
+    font-family: Helvetica;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 10px;
+    color: #9b9b9b;
+}
+.num-head a:hover{
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.num-body {
+    font-family: Helvetica;
+    font-size: 18px;
+    color: #007bff;
+}
+
+/* end profile img */
+
+/* home message post */
+.message-color {
+    background-color: #4c52440e;
+    /* padding-bottom: 0rem; */
+}
+
+.card-body textarea {
+    overflow: auto;
+    /* resize: none; */
+    width: 98%;
+    height: 60px;
+    border: 1px solid #b3dab9;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.message-footer {
+    overflow: hidden;
+}
+
+.t-fo-left {
+    float: left;
+}
+
+.t-fo-left ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+.t-fo-left label {
+    font-size: 25px;
+    /* color: #83b476; */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.t-fo-left input[type="file"] {
+    display: none;
+}
+
+.t-fo-left a:hover {
+    color: #64d547;
+}
+
+.t-fo-right {
+    float: right;
+    color: #727171;
+}
+
+.t-fo-right input[type="submit"] {
+    padding: 2px 5px;
+    /* font-weight: bold; */
+    /* color: #fff;
+    background: #83b476; */
+    /* border: 1px solid #aaa; */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* end message home post */
+/* WHO TO FOLLOW */
+
+.whoTofollow-list-img {
+    position: relative;
+}
+.whoTofollow-list-img p{
+    position: relative;
+    top: -10px;
+    /* left: 80%; */
+    margin-left: 14px;
+}
+.whoTofollow-list-img > img{
+    border: 2px solid #d2d6de;
+    border-radius: 50%;
+    padding: 3px;
+    width: 60px;
+    height: 60px;
+}
+
+/* DROP DOWN .whoTofollow-list-img */
+
+.tooltipss a {
+    text-decoration: none;
+}
+
+.tooltipss a:hover {
+    text-decoration: underline;
+}
+
+.tooltipss ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tooltipss ul li:hover ul {
+    display: block;
+}
+
+.tooltipss ul li {
+    position: relative;
+}
+
+.tooltipss ul li ul {
+    position: absolute;
+    display: none;
+    padding: 2px;
+    z-index: 6;
+    background: #333;
+    border-radius: 4px;
+    /* top: 2px; */
+}
+
+.tooltipss ul li ul li {
+    padding: 2px
+}
+
+.tooltipss ul li ul li:hover {
+    background: #6ea3d4;
+    border-radius: 4px
+}
+
+/* EDIT PROFILE IMAGE */
+.profile-user-img {
+    margin: 0 auto;
+    width: 100px;
+    padding: 3px;
+    border: 3px solid #adb5bd;
+}
+.profile-username {
+    font-size: 21px;
+    margin-top: 5px;
+}
+/* EDIT PROFILE IMAGE */
+
+/* JOB POSTER FROFILE */
+
+.user-jobImgBorder {
+    float: left;
+    /* margin:10px 5px 0px 10px; */
+    margin: 1px 5px 0px 10px;
+    border-radius: 50%;
+    border: 2px solid #e6dada;
+}
+.user-jobImg {
+    margin: 2px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+}
+
+.user-jobImg img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.user-jobImgall {
+    margin: 0px 5px 0px 10px;
+    float: left;
+    border-radius: 10%;
+    border: 2px solid #e6dada;
+    padding: 2px;
+}
+
+.user-jobImgall img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+}
+ /* OPTION LIST */
+
+ 
+.options-list a {
+    text-decoration: none;
+}
+
+.options-list ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.options-list ul li:hover ul {
+    display: block;
+}
+
+.options-list ul li {
+    position: relative;
+}
+
+.options-list ul li ul {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    z-index: 6;
+    background: #333;
+    border-radius: 4px;
+    /* top: 4px; */
+    top: -204px;
+    right: -65px;
+}
+
+/* END hash-box */
+
+/* **** like button AND SHARES** */
+
+/* .post .user-block {
+    margin-bottom: 15px;
+} */
+.post ul {
+    padding: 0px;
+}
+
+.post ul button i {
+    /* font-size: 17px; */
+    color: #007bff;
+    transition: all 200ms ease-in;
+}
+
+.post ul button {
+    outline: none;
+    color: #007bff;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+ul li button i {
+    font-size: 17px;
+    /* color: #007bff; */
+    transition: all 200ms ease-in;
+}
+
+ul li button {
+    outline: none;
+    color: #007bff;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.like-btn:hover {
+    outline: none;
+    text-decoration: underline;
+    color: #cf3131;
+}
+
+.like-btn:hover>.fa-thumbs-o-up {
+    outline: none;
+    color: #cf3131;
+}
+
+button.retweeted>.fa-retweet {
+    color: #2ae740;
+}
+
+.share-btn:hover {
+    outline: none;
+    text-decoration: underline;
+    color: #2ae740;
+}
+
+.share-btn:hover>.fa-share {
+    color: #2ae740;
+}
+
+.comments-btn:hover {
+    outline: none;
+    text-decoration: underline;
+    color: #f3a411;
+}
+
+.comments-btn:hover>.fa-comments-o {
+    color: #f3a411;
+}
+
+/* DELETE POST */
+
+
+.deleteButt {
+    padding: 0px;
+    width: 5px;
+}
+
+.deleteButt li {
+    padding: 0px;
+}
+
+.deleteButt li:hover ul {
+    display: block;
+}
+
+.deleteButt li ul {
+    position: absolute;
+    display: none;
+    padding: 0px;
+    z-index: 6;
+}
+
+.deleteButt li ul li {
+    background: white;
+    border-radius: 4px;
+    position: relative;
+    top: -55px;
+    left: -50px;
+}
+
+.deleteButt li ul li:hover {
+    background: #245f97;
+}
+
+.deleteButt li ul li label {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+}
+
+.deleteButt li ul li:hover>label {
+    color: white;
+}
+
+/* tool remove and collapse */
+.user-block>.card-tools {
+    float: right;
+    margin-right: -.625rem;
+}
+.user-block>.card-tools [data-toggle=tooltip] {
+    position: relative;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.btn-tool {
+    background: 0 0;
+    color: #adb5bd;
+    font-size: .875rem;
+    margin: -.75rem 0;
+    padding: .25rem .5rem;
+}
+.nav-scroller > nav > a {
+    color: #ffffff;
+}
+/* crop */
+input#crop {
+    padding: 5px 25px 5px 25px;
+    background: lightseagreen;
+    border: #485c61 1px solid;
+    color: #FFF;
+    visibility: hidden;
+}
+
+#cropped_img {
+    margin-top: 40px;
+    width: 200px;
+}

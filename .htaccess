@@ -1,0 +1,18 @@
+RewriteEngine On
+# Handle Authorization Header
+
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !\.php$
+
+
+#RewriteRule ^([0-9a-zA-Z_-]+).(home)/?$ index.php?username=$1 [NC,L,QSA]
+RewriteRule ^([0-9a-zA-Z_-]+)/?$ profile.php?username=$1 [NC,L,QSA]
+RewriteRule ^([0-9a-zA-Z_-]+).(following|followers|posts|album|album_crop)/?$ $2.php?username=$1 [NC,L,QSA]
+#RewriteRule ^([0-9a-zA-Z_-]+).(jobs|Unemployment|sale|fundraising|crowfund|blog|jobs0|events|movies|sports|news|entertainment|rwandaPhotos|Tembera|hotelbooking|house|car|food|domestic|school|members_earning|career_profession|motel|icyamunara|gurisha)/?$ $2.php?username=$1 [NC,L,QSA]
+RewriteRule ^([0-9a-zA-Z_-]+).(hashtag)/?$ $2.php?hashtag=$1 [NC,L,QSA]
+RewriteRule ^([0-9a-zA-Z_-]+).([0-9a-zA-Z_-]+).(hashtag)/?$ $3.php?hashtag=$1&f=$2 [NC,L,QSA]
+RewriteRule ^i.notifications/?$ notifications.php [NC,L,QSA]
+#RewriteRule ^i.email/?$ email.php [NC,L,QSA]
+

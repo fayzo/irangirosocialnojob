@@ -1,0 +1,35 @@
+/* .whoTofollow {
+    padding: 0.25rem;
+} */
+
+.whoTofollow-list {
+    padding-left:0 
+}
+
+.whoTofollow-list > li {
+    list-style-type: none;
+    padding: 4px 0px ;
+    overflow: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.whoTofollow-list-img {
+    border-radius: 50%;
+    float: left;
+    width: 60px;
+    height: 70px;
+    margin-right: 10px;
+}
+.whoTofollow-list-img > img{
+    border: 2px solid #d2d6de;
+    border-radius: 50%;
+    padding: 3px;
+    width: 60px;
+}
+
+.whoTofollow-list-info {
+    font-size: 13px;
+    font-weight: normal;
+    /* color: rgb(19, 15, 15); */
+    list-style-type: none;
+}

@@ -1,0 +1,97 @@
+.card-header .closeDelete button {
+    border: none;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.card-header .closeDelete {
+    float: right;
+    position: relative;
+    right: 7px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tooltips a {
+    text-decoration: none;
+}
+
+.tooltips a:hover {
+    text-decoration: underline;
+}
+
+.tooltips ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tooltips ul li:hover ul {
+    display: block;
+}
+
+.tooltips ul li {
+    position: relative;
+}
+
+.tooltips ul li ul {
+    position: absolute;
+    display: none;
+    padding: 2px;
+    z-index: 6;
+    background: #333;
+    border-radius: 4px;
+    /* top: 2px; */
+}
+
+.tooltips ul li ul li {
+    padding: 2px
+}
+
+.tooltips ul li ul li:hover {
+    background: #6ea3d4;
+    border-radius: 4px
+}
+
+.tooltipss a {
+    text-decoration: none;
+}
+
+.tooltipss a:hover {
+    text-decoration: underline;
+}
+
+.tooltipss ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tooltipss ul li:hover ul {
+    display: block;
+}
+
+.tooltipss ul li {
+    position: relative;
+}
+
+.tooltipss ul li ul {
+    position: absolute;
+    display: none;
+    padding: 2px;
+    z-index: 6;
+    background: #333;
+    border-radius: 4px;
+    z-index: 1032;
+}
+
+.tooltipss ul li ul li {
+    padding: 2px
+}
+
+.tooltipss ul li ul li:hover {
+    background: #6ea3d4;
+    border-radius: 4px
+}
