@@ -29,7 +29,7 @@
         function deleteRowcomment_(rowID) {
             if (confirm('Are you sure??')) {
                 $.ajax({
-                    url: 'core/ajax_db/comment_db.php',
+                    url: 'core/ajax_db/comment_db',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -46,7 +46,7 @@
          function un_approved(rowID) {
                      if (confirm('Are you sure??')) {
                          $.ajax({
-                             url: 'core/ajax_db/comment_db.php',
+                             url: 'core/ajax_db/comment_db',
                              method: 'POST',
                              dataType: 'text',
                              data: {
@@ -62,7 +62,7 @@
 
         function viewOReditcomment_(rowID, type) {
             $.ajax({
-                url: 'core/ajax_db/comment_db.php',
+                url: 'core/ajax_db/comment_db',
                 method: 'POST',
                 dataType: 'json',
                 data: {
@@ -113,7 +113,7 @@
 
         function getExistingDatacomment_(begin_nmber, end_nmber) {
             $.ajax({
-                url: 'core/ajax_db/comment_db.php',
+                url: 'core/ajax_db/comment_db',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -136,7 +136,7 @@
         		e.preventDefault();
         
                        $.ajax({
-                           url: 'core/ajax_db/ajaxupload_comment.php',
+                           url: 'core/ajax_db/ajaxupload_comment',
                            dataType: 'text',
                            type: "POST",
         			       data:new FormData(this),
@@ -150,7 +150,7 @@
         		        	},
                           success: function (response) {
                                   alert(response);
-                                  console.log(response); 
+                                  // console.log(response); 
                          }, error: function(e) {
         		           		$("#err").html(e).fadeIn();
         	               	} 	
@@ -170,7 +170,7 @@
             var country = $("#country_comment");
             var state = $("#state_comment");
                 $.ajax({
-                   url: 'core/ajax_db/comment_db.php',
+                   url: 'core/ajax_db/comment_db',
                    method: 'POST',
                    data:{
                        key: key,
@@ -193,7 +193,7 @@
                    success: function (response) {
                        if (response !="success"){
                            alert(response);
-                           console.log(response);
+                           // console.log(response);
                        }else {
                            $("#title"+editRowID.val()).html(title.val());
                            $("#athors"+editRowID.val()).html(athors.val());

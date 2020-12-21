@@ -6,7 +6,7 @@ $(document).ready(function() {
       if (button.hasClass('following-btn')) {
 
              $.ajax({
-                    url: 'core/ajax_db/follow.php',
+                    url: 'core/ajax_db/follow',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -29,7 +29,7 @@ $(document).ready(function() {
       }else{
 
             $.ajax({
-                    url: 'core/ajax_db/follow.php',
+                    url: 'core/ajax_db/follow',
                     method: 'POST',
                     dataType: 'text',
                     data: {

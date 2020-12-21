@@ -24,35 +24,35 @@ define('BASE_URL_LINK', 'http://localhost/irangiro_social_site/assets/');
 
 
 define('F_INDEX', BASE_URL_PUBLIC.'irangiro.home');
-define('HOME', BASE_URL_PUBLIC.'index.php');
+define('HOME', BASE_URL_PUBLIC);
 // SETTING FILE
-define('LOGIN', BASE_URL_PUBLIC.'include/login.php');
-define('LOGOUT', BASE_URL_PUBLIC.'include/logout.php');
-define('LOCKSCREEN_LOGIN', BASE_URL_PUBLIC.'include/lockscreen.php');
+define('LOGIN', BASE_URL_PUBLIC.'include/login');
+define('LOGOUT', BASE_URL_PUBLIC.'include/logout');
+define('LOCKSCREEN_LOGIN', BASE_URL_PUBLIC.'include/lockscreen');
 define('LOCKSCREEN_LOGINCORE', BASE_URL_PUBLIC.'core/ajax_db/lockscreen.php?login_id=1');
-define('FORGET_PASSPOWRD', BASE_URL_PUBLIC.'include/forgotpassword.php');
-define('CREATE_PASSPOWRD', BASE_URL_PUBLIC.'include/createpassword.php');
+define('FORGET_PASSPOWRD', BASE_URL_PUBLIC.'include/forgotpassword');
+define('CREATE_PASSPOWRD', BASE_URL_PUBLIC.'include/createpassword');
 
 // UPLOAD PHOTO
 define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'].'/irangiro_social_site');
 // UPLOAD PHOTO
 
 // END SETTING FILE
-define('ACTIVITIES', BASE_URL_PUBLIC.'activities.php');
-define('NETWORK', BASE_URL_PUBLIC.'network.php');
-define('INDEXX', BASE_URL_PUBLIC.'indexx.php');
-define('SHOPPING', BASE_URL_PUBLIC.'shopping.php');
-define('FOLLOWERS', BASE_URL_PUBLIC.'followers.php');
-define('FOLLOWING', BASE_URL_PUBLIC.'following.php');
+define('INDEXX', BASE_URL_PUBLIC);
+define('ACTIVITIES', BASE_URL_PUBLIC.'activities');
+define('NETWORK', BASE_URL_PUBLIC.'network');
+define('SHOPPING', BASE_URL_PUBLIC.'shopping');
+define('FOLLOWERS', BASE_URL_PUBLIC.'followers');
+define('FOLLOWING', BASE_URL_PUBLIC.'following');
 define('PROFILE', BASE_URL_PUBLIC.'profile.php');
-define('PROFILE_EDIT', BASE_URL_PUBLIC.'profileEdit.php');
-define('HASHTAG', BASE_URL_PUBLIC.'hashtag.php');
-define('JOBS', BASE_URL_PUBLIC.'jobs0.php');
-define('JOBSS', BASE_URL_PUBLIC.'jobs.php');
-define('NOTIFICATION', BASE_URL_PUBLIC.'NOTIFICATION.php');
-define('EVENTS', BASE_URL_PUBLIC.'events.php');
-define('SPORTS', BASE_URL_PUBLIC.'sports.php');
-define('SETTINGS', BASE_URL_PUBLIC.'setting.php');
+define('PROFILE_EDIT', BASE_URL_PUBLIC.'profileEdit');
+define('HASHTAG', BASE_URL_PUBLIC.'hashtag');
+define('JOBS', BASE_URL_PUBLIC.'jobs0');
+define('JOBSS', BASE_URL_PUBLIC.'jobs');
+define('NOTIFICATION', BASE_URL_PUBLIC.'NOTIFICATION');
+define('EVENTS', BASE_URL_PUBLIC.'events');
+define('SPORTS', BASE_URL_PUBLIC.'sports');
+define('SETTINGS', BASE_URL_PUBLIC.'setting');
 
 
 // TWITTER SOCIAL MEDIA 

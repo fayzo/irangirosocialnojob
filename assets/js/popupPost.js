@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(document).on('click','.t-show-popup',function () {
         var tweet_id= $(this).data('tweet');
           $.ajax({
-                    url: 'core/ajax_db/popupPost.php',
+                    url: 'core/ajax_db/popupPost',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -12,7 +12,7 @@ $(document).ready(function () {
                         $(".tweet-show-popup-box-cut").click(function () {
                             $(".tweet-show-popup-wrap").hide();
                         });
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
     });
@@ -21,7 +21,7 @@ $(document).ready(function () {
          e.stopPropagation();
         var tweet_id= $(this).data('tweet');
           $.ajax({
-              url: 'core/ajax_db/imagePopup.php',
+              url: 'core/ajax_db/imagePopup',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -31,7 +31,7 @@ $(document).ready(function () {
                         $(".close-imagePopup").click(function () {
                             $(".img-popup").hide();
                         });
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
      });
@@ -40,7 +40,7 @@ $(document).ready(function () {
          e.stopPropagation();
         var tweet_id= $(this).data('tweet');
           $.ajax({
-              url: 'core/ajax_db/imageViewPopup.php',
+              url: 'core/ajax_db/imageViewPopup',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -50,7 +50,7 @@ $(document).ready(function () {
                         $(".close-imagePopup").click(function () {
                             $(".img-popup").hide();
                         });
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
          });

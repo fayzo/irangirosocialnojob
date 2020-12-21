@@ -3,7 +3,7 @@ $(document).ready(function() {
         var getmessage=1;
 
         $.ajax({
-                    url: 'core/ajax_db/messages.php',
+                    url: 'core/ajax_db/messages',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -15,7 +15,7 @@ $(document).ready(function() {
                         $("#tooltipsmessages").hide();
                         $("#tooltipsmessages1").hide();
 
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
     });
@@ -25,7 +25,7 @@ $(document).ready(function() {
         var getmessage1=1;
 
         $.ajax({
-                    url: 'core/ajax_db/messages.php',
+                    url: 'core/ajax_db/messages',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -36,7 +36,7 @@ $(document).ready(function() {
                         $("#messages1").hide();
                         $("#tooltipsmessages").hide();
                         $("#tooltipsmessages1").hide();
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
     });
@@ -45,7 +45,7 @@ $(document).ready(function() {
         var notificationDrpdown=1;
 
         $.ajax({
-                    url: 'core/ajax_db/messages.php',
+                    url: 'core/ajax_db/messages',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -54,7 +54,7 @@ $(document).ready(function() {
                         $("#notification-menu-view").html(response);
                         $("#notification").hide();
                         $("#notification1").hide();
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
     });
@@ -63,7 +63,7 @@ $(document).ready(function() {
         var get_id= $(this).data('user');
 
         $.ajax({
-                    url: 'core/ajax_db/messages.php',
+                    url: 'core/ajax_db/messages',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -79,10 +79,10 @@ $(document).ready(function() {
                                   }else{
                                       autoscroll=true;
                                   }
-                                 console.log(response);
+                                 // console.log(response);
                              });
 
-                         console.log(response);
+                         // console.log(response);
                          $('.close-msgPopup').click(function () {
                               clearInterval(timer);
                           });
@@ -92,7 +92,7 @@ $(document).ready(function() {
          getmessages = function () {
               
              $.ajax({
-                 url: 'core/ajax_db/messages.php',
+                 url: 'core/ajax_db/messages',
                  method: 'POST',
                  dataType: 'text',
                  data: {
@@ -108,7 +108,7 @@ $(document).ready(function() {
                          } else {
                              autoscroll = true;
                          }
-                         console.log(response);
+                         // console.log(response);
                      });
 
                      $('.close-msgPopup').click(function () {
@@ -129,7 +129,7 @@ $(document).ready(function() {
         var getmessage=1;
 
                  $.ajax({
-                             url: 'core/ajax_db/messages.php',
+                             url: 'core/ajax_db/messages',
                              method: 'POST',
                              dataType: 'text',
                              data: {
@@ -137,7 +137,7 @@ $(document).ready(function() {
                              }, success: function (response) {
                                  $(".popupTweet").html(response);
                                  clearInterval(timer);
-                                 console.log(response);
+                                 // console.log(response);
                              }
                          });
             });
@@ -152,7 +152,7 @@ $(document).ready(function() {
             $(document).on('click','.delete',function () {
                 
                     $.ajax({
-                                url: 'core/ajax_db/messages.php',
+                                url: 'core/ajax_db/messages',
                                 method: 'POST',
                                 dataType: 'text',
                                 data: {
@@ -160,7 +160,7 @@ $(document).ready(function() {
                                 }, success: function (response) {
                                     $('.message-del-inner').height('0px');
                                     getmessages();
-                                    console.log(response);
+                                    // console.log(response);
                                 }
                             });
             });
@@ -181,7 +181,7 @@ $(document).ready(function() {
                 $(document).on('click','.deleteAll',function () {
                     
                         $.ajax({
-                                    url: 'core/ajax_db/messages.php',
+                                    url: 'core/ajax_db/messages',
                                     method: 'POST',
                                     dataType: 'text',
                                     data: {
@@ -195,7 +195,7 @@ $(document).ready(function() {
                                             $("#responseMess").fadeOut();
                                         }, 1000);
 
-                                        console.log(response);
+                                        // console.log(response);
                                     }
                                 });
                 });

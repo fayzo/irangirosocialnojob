@@ -28,7 +28,7 @@
         function deleteRowuncomment_(rowID) {
             if (confirm('Are you sure??')) {
                 $.ajax({
-                    url: 'core/ajax_db/uncomment_db.php',
+                    url: 'core/ajax_db/uncomment_db',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -45,7 +45,7 @@
         function approved(rowID) {
             if (confirm('Are you sure??')) {
                 $.ajax({
-                    url: 'core/ajax_db/uncomment_db.php',
+                    url: 'core/ajax_db/uncomment_db',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -61,7 +61,7 @@
 
         function viewORedituncomment_(rowID, type) {
             $.ajax({
-                url: 'core/ajax_db/uncomment_db.php',
+                url: 'core/ajax_db/uncomment_db',
                 method: 'POST',
                 dataType: 'json',
                 data: {
@@ -114,7 +114,7 @@
         function getExistingDatauncomment_(begin_nmber, end_nmber) {
 
             $.ajax({
-                url: 'core/ajax_db/uncomment_db.php',
+                url: 'core/ajax_db/uncomment_db',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -137,7 +137,7 @@
 		e.preventDefault();
 
                 $.ajax({
-                   url: 'core/ajax_db/ajaxupload_uncomment.php',
+                   url: 'core/ajax_db/ajaxupload_uncomment',
                    dataType: 'text',
                    type: "POST",
 			       data:new FormData(this),
@@ -151,7 +151,7 @@
 		        	},
                    success: function (response) {
                            alert(response);
-                           console.log(response); 
+                           // console.log(response); 
                   }, error: function(e) {
 		           		$("#err").html(e).fadeIn();
 	               	} 	
@@ -171,7 +171,7 @@
             var country = $("#country_uncomment");
             var state = $("#state_uncomment");
                 $.ajax({
-                   url: 'uncomment_db.php',
+                   url: 'uncomment_db',
                    method: 'POST',
                    data:{
                        key: key,
@@ -194,7 +194,7 @@
                    success: function (response) {
                        if (response !="success"){
                            alert(response);
-                           console.log(response);
+                           // console.log(response);
                        }else {
                            $("#title"+editRowID.val()).html(title.val());
                            $("#athors"+editRowID.val()).html(athors.val());

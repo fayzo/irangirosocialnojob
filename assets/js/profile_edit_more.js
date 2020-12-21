@@ -38,7 +38,7 @@ function profile_edit_more(key) {
         isEmpty(duties) && isEmpty(field) && isEmpty(field1) && isEmpty(field2) && isEmpty(employment)){
 
         $.ajax({
-        url: 'core/ajax_db/profile_edit_more.php',
+        url: 'core/ajax_db/profile_edit_more',
         method: "POST",
         dataType: "text",
         data: {
@@ -75,7 +75,7 @@ function profile_edit_more(key) {
             
         },
         success: function (response) {
-            console.log(response);
+            // console.log(response);
             if (response.indexOf('SUCCESS') >= 0) {
                 // setInterval(function() {
                 //     location.reload();

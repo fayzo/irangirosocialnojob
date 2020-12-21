@@ -8,7 +8,7 @@ $(document).ready(function () {
         $('.progress').removeClass().addClass('progress-xss');
 
         $.ajax({
-            url: 'core/ajax_db/popupPostForm.php',
+            url: 'core/ajax_db/popupPostForm',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -21,7 +21,7 @@ $(document).ready(function () {
                     $(".popup-tweet-wrap").hide();
                 });
 
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
             if (textarea != '') {
                 $.ajax({
-                    url: "core/ajax_db/addPostForm.php",
+                    url: "core/ajax_db/addPostForm",
                     method: "POST",
                     data: {
                         key: 'textarea',
@@ -77,7 +77,7 @@ $(document).ready(function () {
                 return false;
             } else {
                 $.ajax({
-                    url: "core/ajax_db/addPostForm.php",
+                    url: "core/ajax_db/addPostForm",
                     method: "POST",
                     data: new FormData(this),
                     contentType: false,

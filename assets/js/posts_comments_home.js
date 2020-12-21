@@ -8,7 +8,7 @@ $(document).ready(function () {
 
         if (comment != "") {
               $.ajax({
-                    url: 'core/ajax_db/posts_comments.php',
+                    url: 'core/ajax_db/posts_comments',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -17,7 +17,7 @@ $(document).ready(function () {
                     }, success: function (response) {
                         $('#commentsHome' + tweet_id).html(response);
                         $('#commentHome' + tweet_id).val("");
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
         }
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         if (comment != "") {
               $.ajax({
-                    url: 'core/ajax_db/posts_comments.php',
+                    url: 'core/ajax_db/posts_comments',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -41,7 +41,7 @@ $(document).ready(function () {
                     }, success: function (response) {
                         $('#commentsHomeSecond' + comment_id).html(response);
                         $('#commentHomeSecond' + comment_id).val("");
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
         }

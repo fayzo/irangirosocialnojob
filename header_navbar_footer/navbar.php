@@ -1,6 +1,6 @@
 <header class="main-header">
       <!-- Logo -->
-      <a href="index.php" class="logo">
+      <a href="<?php echo HOME ;?>" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>IR</b>LT</span>
         <!-- logo for regular state and mobile devices -->
@@ -15,7 +15,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="sidebar-toggle_" href="index.php">
+        <a class="sidebar-toggle_" href="<?php echo HOME ;?>">
           <i class="fa fa-home"> </i>
           <span class="hidden-xs">Home</span>
           </a>
@@ -30,7 +30,7 @@
           <i class="fa fa-star"> </i>
           <span class="hidden-xs">Jobs</span>
           </a> -->
-        <a class="sidebar-toggle_" href="network.php">
+        <a class="sidebar-toggle_" href="<?php echo NETWORK ;?>">
           <i class="fa fa-users"> </i>
           <span class="hidden-xs">Network</span>
          </a>

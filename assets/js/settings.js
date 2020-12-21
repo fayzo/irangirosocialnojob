@@ -4,7 +4,7 @@ function settingsUsername(key) {
     var id = $("#id_userSetting");
 
     $.ajax({
-        url: 'core/ajax_db/setting.php',
+        url: 'core/ajax_db/setting',
         method: "POST",
         dataType: "text",
         data: {
@@ -14,7 +14,7 @@ function settingsUsername(key) {
             email: email.val(),
         },
         success: function (response) {
-            console.log(response);
+            // console.log(response);
             if (response.indexOf('SUCCESS') >= 0) {
                 $("#response_settings").html(response);
             } else {
@@ -35,7 +35,7 @@ function settingsUsernamepass(key) {
     if (isEmpty(currentpassword) && isEmpty(newpassword) && isEmpty(verifypassword)) {
 
         $.ajax({
-            url: 'core/ajax_db/setting.php',
+            url: 'core/ajax_db/setting',
             method: "POST",
             dataType: "text",
             data: {
@@ -46,7 +46,7 @@ function settingsUsernamepass(key) {
                 verifypassword: verifypassword.val(),
             },
             success: function (response) {
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     $("#response_settingpass").html(response);
                 } else if (response.indexOf('Current password') >= 0) {
@@ -69,7 +69,7 @@ function settingsUsername1(key) {
     var id = $("#id_userSetting1");
 
     $.ajax({
-        url: 'core/ajax_db/setting.php',
+        url: 'core/ajax_db/setting',
         method: "POST",
         dataType: "text",
         data: {
@@ -79,7 +79,7 @@ function settingsUsername1(key) {
             email: email.val(),
         },
         success: function (response) {
-            console.log(response);
+            // console.log(response);
             if (response.indexOf('SUCCESS') >= 0) {
                 $("#response_settings1").html(response);
             } else {
@@ -100,7 +100,7 @@ function settingsUsernamepass1(key) {
     if (isEmpty(currentpassword) && isEmpty(newpassword) && isEmpty(verifypassword)) {
 
         $.ajax({
-            url: 'core/ajax_db/setting.php',
+            url: 'core/ajax_db/setting',
             method: "POST",
             dataType: "text",
             data: {
@@ -111,7 +111,7 @@ function settingsUsernamepass1(key) {
                 verifypassword: verifypassword.val(),
             },
             success: function (response) {
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     $("#response_settingpass1").html(response);
                 } else if (response.indexOf('Current password') >= 0) {

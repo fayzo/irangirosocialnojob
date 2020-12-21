@@ -2,14 +2,14 @@ $(document).ready(function() {
     $('.search').keyup(function () {
         var searcher = $(this).val();
          $.ajax({
-                    url: 'core/ajax_db/search.php',
+                    url: 'core/ajax_db/search',
                     method: 'POST',
                     dataType: 'text',
                     data: {
                         search: searcher,
                     }, success: function (response) {
                         $(".search-result").html(response);
-                        // console.log(response);
+                        // // console.log(response);
                     }
                 });
     });
@@ -18,14 +18,14 @@ $(document).ready(function() {
         $('.message-recent').hide();
         var searching = $(this).val();
         $.ajax({
-            url: 'core/ajax_db/searchUserInMeassage.php',
+            url: 'core/ajax_db/searchUserInMeassage',
             method: 'POST',
             dataType: 'text',
             data: {
                 search: searching,
             }, success: function (response) {
                 $(".message-body").html(response);
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -33,14 +33,14 @@ $(document).ready(function() {
     $('.search-siderbar').keyup(function () {
         var searcher = $(this).val();
          $.ajax({
-                    url: 'core/ajax_db/search-siderbar.php',
+                    url: 'core/ajax_db/search-siderbar',
                     method: 'POST',
                     dataType: 'text',
                     data: {
                         search: searcher,
                     }, success: function (response) {
                         $(".search-result-siderbar").html(response);
-                        // console.log(response);
+                        // // console.log(response);
                     }
                 });
     });

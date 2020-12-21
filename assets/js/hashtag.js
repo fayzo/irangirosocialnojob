@@ -8,7 +8,7 @@ $(document).ready(function () {
             var datastring = '' + text;
 
             $.ajax({
-                url: 'core/ajax_db/gethashtag.php',
+                url: 'core/ajax_db/gethashtag',
                 method: 'POST',
                 dataType: 'text',
                 cache: false,
@@ -26,7 +26,7 @@ $(document).ready(function () {
                         $('.status').focus();
                         $('#count').text(max - content.length);
                     });
-                    console.log(response);
+                    // console.log(response);
                 }
             });
         } else {

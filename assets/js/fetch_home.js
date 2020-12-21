@@ -8,7 +8,7 @@ $(document).ready(function () {
             $('#loader').show();
 
             $.ajax({
-                url: 'core/ajax_db/fetchPost.php',
+                url: 'core/ajax_db/fetchPost',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -33,7 +33,7 @@ $(document).ready(function () {
                 }, success: function (response) {
                     $('.posted').html(response);
                     $('#loader').hide();
-                    // console.log(response);
+                    // // console.log(response);
                 }
             });
         }

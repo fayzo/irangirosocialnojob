@@ -5,7 +5,7 @@ $(document).ready(function () {
         var login_id = $(this).data('login');
 
         $.ajax({
-            url: 'core/ajax_db/login_add.php',
+            url: 'core/ajax_db/login_add',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -15,7 +15,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                     $(".login-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -24,13 +24,13 @@ $(document).ready(function () {
         e.stopPropagation();
 
         $.ajax({
-            url: 'core/ajax_db/logout_.php',
+            url: 'core/ajax_db/logout_',
             method: 'POST',
             dataType: 'text',
            
             success: function (response) {
                 location.reload();
-                console.log(response);
+                // console.log(response);
             }
         });
     });

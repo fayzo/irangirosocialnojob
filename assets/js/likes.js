@@ -7,7 +7,7 @@ $(document).ready(function () {
         var button = $(this);
 
         $.ajax({
-            url: 'core/ajax_db/likes.php',
+            url: 'core/ajax_db/likes',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
                 // location.reload();
 
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -39,7 +39,7 @@ $(document).ready(function () {
         var button = $(this);
 
         $.ajax({
-            url: 'core/ajax_db/likes.php',
+            url: 'core/ajax_db/likes',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -58,7 +58,7 @@ $(document).ready(function () {
                 button.find('.fa-thumbs-up').addClass('fa-thumbs-o-up').css('color', '#007bff');
                 button.find('.fa-thumbs-o-up').removeClass('fa-thumbs-up');
 
-                console.log(response);
+                // console.log(response);
             }
         });
     });

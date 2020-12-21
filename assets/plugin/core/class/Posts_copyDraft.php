@@ -1247,7 +1247,7 @@ class Posts_copyDraft extends  Gurisha {
 
 
 } 
-$posts_copyDraft= new Posts_copyDraft();
+$Posts_copyDraft= new Posts_copyDraft();
 
 
 /*

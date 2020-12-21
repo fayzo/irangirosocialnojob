@@ -7,7 +7,7 @@ $(document).ready(function () {
         var button = $(this);
 
         $.ajax({
-            url: 'core/ajax_db/post_likes.php',
+            url: 'core/ajax_db/post_likes',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
                 // location.reload();
 
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -37,7 +37,7 @@ $(document).ready(function () {
         var button = $(this);
 
         $.ajax({
-            url: 'core/ajax_db/post_likes.php',
+            url: 'core/ajax_db/post_likes',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -56,7 +56,7 @@ $(document).ready(function () {
                 button.find('.fa-heart').addClass('fa-heart-o');
                 button.find('.fa-heart-o').removeClass('fa-heart').css('color', 'red');
 
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -70,7 +70,7 @@ $(document).ready(function () {
             var button = $(this);
 
             $.ajax({
-                url: 'core/ajax_db/post_likes.php',
+                url: 'core/ajax_db/post_likes',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -87,7 +87,7 @@ $(document).ready(function () {
 
                     // location.reload();
 
-                    console.log(response);
+                    // console.log(response);
                 }
             });
         });
@@ -102,7 +102,7 @@ $(document).ready(function () {
             var button = $(this);
 
             $.ajax({
-                url: 'core/ajax_db/post_likes.php',
+                url: 'core/ajax_db/post_likes',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -121,7 +121,7 @@ $(document).ready(function () {
                     button.find('.fa-thumbs-down').addClass('fa-thumbs-o-down').css('color', '#007bff');
                     button.find('.fa-thumbs-o-down').removeClass('fa-thumbs-down');
 
-                    console.log(response);
+                    // console.log(response);
                 }
             });
         });

@@ -4,7 +4,7 @@ $(document).ready(function() {
         var get_id= $(this).data('user');
 
         $.ajax({
-                    url: 'core/ajax_db/messages.php',
+                    url: 'core/ajax_db/messages',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -14,7 +14,7 @@ $(document).ready(function() {
                     success: function (response) {
                         getmessages();
                         $("#msg").val('');
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
        });

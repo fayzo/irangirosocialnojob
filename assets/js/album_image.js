@@ -23,7 +23,7 @@ $(document).ready(function (e) {
                 return false;
             } else {
                 $.ajax({
-                    url: "core/ajax_db/album_image.php",
+                    url: "core/ajax_db/album_image",
                     method: "POST",
                     data: new FormData(this),
                     contentType: false,

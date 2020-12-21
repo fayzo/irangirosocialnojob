@@ -67,10 +67,10 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                     	foreach ($tweets as $tweet) {
                             if (!empty($tweet['tweet_image'])) {
                                 # code...
-                                $likes= $posts_copyDraft->likes($user_id,$tweet['tweet_id']);
-                                $retweet= $posts_copyDraft->checkRetweet($tweet['tweet_id'],$user_id);
-                                $user= $posts_copyDraft->userData($retweet['retweet_by']);
-                                $comment= $posts_copyDraft->comments($tweet['tweet_id']);
+                                $likes= $Posts_copyDraft->likes($user_id,$tweet['tweet_id']);
+                                $retweet= $Posts_copyDraft->checkRetweet($tweet['tweet_id'],$user_id);
+                                $user= $Posts_copyDraft->userData($retweet['retweet_by']);
+                                $comment= $Posts_copyDraft->comments($tweet['tweet_id']);
                                 // var_dump($comment);
                                 // var_dump($tweet['tweet_id']);
                                      # code... 
@@ -104,9 +104,9 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                         <span class="username">
                                             <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['firstname']." ".$user['lastname'] ;?></a>
                                             <!-- //Jonathan Burke Jr. -->
-                                            <span class="description">Shared public - <?php echo $posts_copyDraft->timeAgo($retweet['posted_on']); ?></span>
+                                            <span class="description">Shared public - <?php echo $Posts_copyDraft->timeAgo($retweet['posted_on']); ?></span>
                                         </span>
-                                        <span class="description"><?php echo $posts_copyDraft->getTweetLink($retweet['retweet_Msg']); ?></span>
+                                        <span class="description"><?php echo $Posts_copyDraft->getTweetLink($retweet['retweet_Msg']); ?></span>
                                     </div>
 
                                     <div class="card retweetcolor t-show-popup more" data-tweet="<?php echo $tweet["tweet_id"];?>">
@@ -183,14 +183,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -248,14 +248,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                         <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                         <!-- //Jonathan Burke Jr. -->
                                                                     </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                                 </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                                                 <!-- STATUS -->
                                                                 <span><?php 
-                                                                $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                                $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                                 if(!empty($tatus)){
                                                                 $post = (strlen($tatus) > 140)? 
                                                                             strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -312,14 +312,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                         <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                         <!-- //Jonathan Burke Jr. -->
                                                                     </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                                 </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                                                 <!-- STATUS -->
                                                                 <span><?php 
-                                                                $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                                $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                                 if(!empty($tatus)){
                                                                 $post = (strlen($tatus) > 140)? 
                                                                             strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -367,14 +367,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -419,14 +419,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -472,14 +472,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -520,9 +520,9 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                    <span class="username">
                                                                        <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                        <!-- //Jonathan Burke Jr. -->
-                                                                       <span class="description">Shared publicly - <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                       <span class="description">Shared publicly - <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                                    </span>
-                                                                   <span class="description"><?php echo $posts_copyDraft->getTweetLink($tweet['status']); ?></span>
+                                                                   <span class="description"><?php echo $Posts_copyDraft->getTweetLink($tweet['status']); ?></span>
                                                                </div>
 
                                                         </div><!-- col -->
@@ -556,7 +556,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                 </ul>
                                             <?php } ?> 
                                         </span>
-                                        <span class="description">Shared publicly - <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                        <span class="description">Shared publicly - <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                     </div>
                                     <!-- /.user-block -->
                                     <?php 
@@ -1066,7 +1066,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                               <?php }?>
 
                                   <p id="link_">
-                                     <?php echo $posts_copyDraft->getTweetLink($tweet['status']) ;?>
+                                     <?php echo $Posts_copyDraft->getTweetLink($tweet['status']) ;?>
                                    </p>
                              <?php } ?>
 
@@ -1095,7 +1095,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                          <span style="float:right">
                                     
                                           <li  class=" list-inline-item"><button class="comments-btn text-sm" data-target="#a<?php echo  $tweet["tweet_id"];?>" data-toggle="collapse">
-                                              <i class="fa fa-comments-o mr-1"></i> Comments (<?php echo $posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)
+                                              <i class="fa fa-comments-o mr-1"></i> Comments (<?php echo $Posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)
                                           </button></li>
                                         
 
@@ -1130,21 +1130,21 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                    <div class="card collapse" id="a<?php echo  $tweet["tweet_id"];?>">
                                       <div class="card-body" style="padding-right:0">
                                         <?php if (!empty($comment)) { ?>
-                                        <h5><i>Comments (<?php echo $posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)</i></h5>
+                                        <h5><i>Comments (<?php echo $Posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)</i></h5>
                                         <span id='responseDeletePostSeconds0'></span>
 
                                          <div class="direct-chat-message direct-chat-messageS large-2" >
                                          <span class="commentsHome" id="commentsHome<?php echo $tweet['tweet_id'];?>">
                                            <?php foreach ($comment as $comments) { 
-                                               $second_likes= $posts_copyDraft->Like_second($user_id,$comments['comment_id']);
-                                               $dislikes= $posts_copyDraft->dislike($user_id,$comments['comment_id']);
+                                               $second_likes= $Posts_copyDraft->Like_second($user_id,$comments['comment_id']);
+                                               $dislikes= $Posts_copyDraft->dislike($user_id,$comments['comment_id']);
                                                ?>
                                                 <!-- Conversations are loaded here -->
                                                   <!-- Message. Default to the left -->
                                                     <div class="direct-chat-msg" id="userComment0<?php echo $comments['comment_id']; ?>">
                                                         <div class="direct-chat-info clearfix">
                                                             <span class="direct-chat-name float-left"><?php echo $comments["username"] ;?></span>
-                                                            <span class="direct-chat-timestamp float-right"><?php echo $posts_copyDraft->timeAgo($comments['comment_at']); ?></span>
+                                                            <span class="direct-chat-timestamp float-right"><?php echo $Posts_copyDraft->timeAgo($comments['comment_at']); ?></span>
                                                         </div>
                                                         <!-- /.direct-chat-info -->
                                                          <?php if (!empty($comments["profile_img"])) {?>
@@ -1154,7 +1154,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                          <?php } ?>
                                                         <!-- /.direct-chat-img -->
                                                         <div class="direct-chat-text">
-                                                         <?php echo  $posts_copyDraft->getTweetLink($comments["comment"]) ;?>
+                                                         <?php echo  $Posts_copyDraft->getTweetLink($comments["comment"]) ;?>
                                                       <!-- /.direct-chat-text -->
                                                       <ul class="list-inline clear-float" style="list-style-type: none; margin-bottom:0;">  
                                                        
@@ -1180,7 +1180,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                         <span style="float:right">
                                                                               
                                                         <li  class=" list-inline-item"><button class="comments-btn text-sm" data-target="#a<?php echo  $comments["comment_id"] ;?>" data-toggle="collapse">
-                                                            <i class="fa fa-comments-o mr-1"></i> Comments  (<?php echo $posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)
+                                                            <i class="fa fa-comments-o mr-1"></i> Comments  (<?php echo $Posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)
                                                         </button></li>
                                                                      
                                                             <?php if ($comments["comment_by"] == $user_id){ ?>
@@ -1216,9 +1216,9 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                         </div>
                                                         <div class="card-body" style="padding-right:0">
                                                             <?php 
-                                                             $comment_second= $posts_copyDraft->comments_second($comments['comment_id']);
+                                                             $comment_second= $Posts_copyDraft->comments_second($comments['comment_id']);
                                                             if (!empty($comment_second)) { ?>
-                                                            <h5><i>Comments (<?php echo $posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)</i></h5>
+                                                            <h5><i>Comments (<?php echo $Posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)</i></h5>
                                                             <span id='responseDeletePostSecond'></span>
                                                             <div class="direct-chat-message direct-chat-messageS large-2" >
                                                             <span class="commentsHome" id="commentsHomeSecond<?php echo $comments['comment_id'];?>">
@@ -1228,7 +1228,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                         <div class="direct-chat-msg" id="userComment<?php echo $comments0["comment_id_"]; ?>" >
                                                                             <div class="direct-chat-info clearfix">
                                                                                 <span class="direct-chat-name float-left"><?php echo $comments0["username"] ;?></span>
-                                                                                <span class="direct-chat-timestamp float-right"><?php echo $posts_copyDraft->timeAgo($comments0['comment_at_']); ?></span>
+                                                                                <span class="direct-chat-timestamp float-right"><?php echo $Posts_copyDraft->timeAgo($comments0['comment_at_']); ?></span>
                                                                             </div>
                                                                             <!-- /.direct-chat-info -->
                                                                             <?php if (!empty($comments0["profile_img"])) { ?>
@@ -1238,7 +1238,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                             <?php } ?>
                                                                             <!-- /.direct-chat-img -->
                                                                             <div class="direct-chat-text">
-                                                                                <?php echo  $posts_copyDraft->getTweetLink($comments0["comment_"]) ;?>
+                                                                                <?php echo  $Posts_copyDraft->getTweetLink($comments0["comment_"]) ;?>
                                                                                  <!-- /.direct-chat-text -->
                                                                                 <ul class="list-inline float-right" style="list-style-type: none; margin-bottom:0;">  
 
@@ -1345,10 +1345,10 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                     	<?php 
                     	$tweets = $trending->getTweetsTrendbyhastag($hashtag);
                     	 foreach ($tweets as $tweet) {
-                                $likes= $posts_copyDraft->likes($user_id,$tweet['tweet_id']);
-                                $retweet= $posts_copyDraft->checkRetweet($tweet['tweet_id'],$user_id);
-                                $user= $posts_copyDraft->userData($retweet['retweet_by']);
-                                $comment= $posts_copyDraft->comments($tweet['tweet_id']);
+                                $likes= $Posts_copyDraft->likes($user_id,$tweet['tweet_id']);
+                                $retweet= $Posts_copyDraft->checkRetweet($tweet['tweet_id'],$user_id);
+                                $user= $Posts_copyDraft->userData($retweet['retweet_by']);
+                                $comment= $Posts_copyDraft->comments($tweet['tweet_id']);
                                 // var_dump($comment);
                                 // var_dump($tweet['tweet_id']);
                                      # code... 
@@ -1382,9 +1382,9 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                         <span class="username">
                                             <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['firstname']." ".$user['lastname'] ;?></a>
                                             <!-- //Jonathan Burke Jr. -->
-                                            <span class="description">Shared public - <?php echo $posts_copyDraft->timeAgo($retweet['posted_on']); ?></span>
+                                            <span class="description">Shared public - <?php echo $Posts_copyDraft->timeAgo($retweet['posted_on']); ?></span>
                                         </span>
-                                        <span class="description"><?php echo $posts_copyDraft->getTweetLink($retweet['retweet_Msg']); ?></span>
+                                        <span class="description"><?php echo $Posts_copyDraft->getTweetLink($retweet['retweet_Msg']); ?></span>
                                     </div>
 
                                     <div class="card retweetcolor t-show-popup more" data-tweet="<?php echo $tweet["tweet_id"];?>">
@@ -1461,14 +1461,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -1526,14 +1526,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                         <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                         <!-- //Jonathan Burke Jr. -->
                                                                     </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                                 </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                                                 <!-- STATUS -->
                                                                 <span><?php 
-                                                                $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                                $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                                 if(!empty($tatus)){
                                                                 $post = (strlen($tatus) > 140)? 
                                                                             strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -1590,14 +1590,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                         <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                         <!-- //Jonathan Burke Jr. -->
                                                                     </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                                 </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                                                 <!-- STATUS -->
                                                                 <span><?php 
-                                                                $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                                $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                                 if(!empty($tatus)){
                                                                 $post = (strlen($tatus) > 140)? 
                                                                             strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -1645,14 +1645,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -1697,14 +1697,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -1750,14 +1750,14 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                      <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
-                                                                    <span class="description">Shared publicly -  <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                    <span class="description">Shared publicly -  <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                               </div>
                                                         </div> <!-- col -->
 
                                                         <div class="col-12" style="clear:both">
                                      		    	          <!-- STATUS -->
                                                              <span><?php 
-                                                             $tatus= $posts_copyDraft->getTweetLink($tweet['status']);
+                                                             $tatus= $Posts_copyDraft->getTweetLink($tweet['status']);
                                                              if(!empty($tatus)){
                                                              $post = (strlen($tatus) > 140)? 
                                                                            strtolower(substr($tatus,0,strlen($tatus)-140).' ...
@@ -1798,9 +1798,9 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                    <span class="username">
                                                                        <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
                                                                        <!-- //Jonathan Burke Jr. -->
-                                                                       <span class="description">Shared publicly - <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                                                       <span class="description">Shared publicly - <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                                                    </span>
-                                                                   <span class="description"><?php echo $posts_copyDraft->getTweetLink($tweet['status']); ?></span>
+                                                                   <span class="description"><?php echo $Posts_copyDraft->getTweetLink($tweet['status']); ?></span>
                                                                </div>
 
                                                         </div><!-- col -->
@@ -1834,7 +1834,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                 </ul>
                                             <?php } ?> 
                                         </span>
-                                        <span class="description">Shared publicly - <?php echo $posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
+                                        <span class="description">Shared publicly - <?php echo $Posts_copyDraft->timeAgo($tweet['posted_on']); ?></span>
                                     </div>
                                     <!-- /.user-block -->
                                     <?php 
@@ -2344,7 +2344,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                               <?php }?>
 
                                   <p id="link_">
-                                     <?php echo $posts_copyDraft->getTweetLink($tweet['status']) ;?>
+                                     <?php echo $Posts_copyDraft->getTweetLink($tweet['status']) ;?>
                                    </p>
                              <?php } ?>
 
@@ -2373,7 +2373,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                          <span style="float:right">
                                     
                                           <li  class=" list-inline-item"><button class="comments-btn text-sm" data-target="#a<?php echo  $tweet["tweet_id"];?>" data-toggle="collapse">
-                                              <i class="fa fa-comments-o mr-1"></i> Comments (<?php echo $posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)
+                                              <i class="fa fa-comments-o mr-1"></i> Comments (<?php echo $Posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)
                                           </button></li>
                                         
 
@@ -2408,21 +2408,21 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                    <div class="card collapse" id="a<?php echo  $tweet["tweet_id"];?>">
                                       <div class="card-body" style="padding-right:0">
                                         <?php if (!empty($comment)) { ?>
-                                        <h5><i>Comments (<?php echo $posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)</i></h5>
+                                        <h5><i>Comments (<?php echo $Posts_copyDraft->CountsComment($tweet["tweet_id"]); ?>)</i></h5>
                                         <span id='responseDeletePostSeconds0'></span>
 
                                          <div class="direct-chat-message direct-chat-messageS large-2" >
                                          <span class="commentsHome" id="commentsHome<?php echo $tweet['tweet_id'];?>">
                                            <?php foreach ($comment as $comments) { 
-                                               $second_likes= $posts_copyDraft->Like_second($user_id,$comments['comment_id']);
-                                               $dislikes= $posts_copyDraft->dislike($user_id,$comments['comment_id']);
+                                               $second_likes= $Posts_copyDraft->Like_second($user_id,$comments['comment_id']);
+                                               $dislikes= $Posts_copyDraft->dislike($user_id,$comments['comment_id']);
                                                ?>
                                                 <!-- Conversations are loaded here -->
                                                   <!-- Message. Default to the left -->
                                                     <div class="direct-chat-msg" id="userComment0<?php echo $comments['comment_id']; ?>">
                                                         <div class="direct-chat-info clearfix">
                                                             <span class="direct-chat-name float-left"><?php echo $comments["username"] ;?></span>
-                                                            <span class="direct-chat-timestamp float-right"><?php echo $posts_copyDraft->timeAgo($comments['comment_at']); ?></span>
+                                                            <span class="direct-chat-timestamp float-right"><?php echo $Posts_copyDraft->timeAgo($comments['comment_at']); ?></span>
                                                         </div>
                                                         <!-- /.direct-chat-info -->
                                                          <?php if (!empty($comments["profile_img"])) {?>
@@ -2432,7 +2432,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                          <?php } ?>
                                                         <!-- /.direct-chat-img -->
                                                         <div class="direct-chat-text">
-                                                         <?php echo  $posts_copyDraft->getTweetLink($comments["comment"]) ;?>
+                                                         <?php echo  $Posts_copyDraft->getTweetLink($comments["comment"]) ;?>
                                                       <!-- /.direct-chat-text -->
                                                       <ul class="list-inline clear-float" style="list-style-type: none; margin-bottom:0;">  
                                                        
@@ -2458,7 +2458,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                         <span style="float:right">
                                                                               
                                                         <li  class=" list-inline-item"><button class="comments-btn text-sm" data-target="#a<?php echo  $comments["comment_id"] ;?>" data-toggle="collapse">
-                                                            <i class="fa fa-comments-o mr-1"></i> Comments  (<?php echo $posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)
+                                                            <i class="fa fa-comments-o mr-1"></i> Comments  (<?php echo $Posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)
                                                         </button></li>
                                                                      
                                                             <?php if ($comments["comment_by"] == $user_id){ ?>
@@ -2494,9 +2494,9 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                         </div>
                                                         <div class="card-body" style="padding-right:0">
                                                             <?php 
-                                                             $comment_second= $posts_copyDraft->comments_second($comments['comment_id']);
+                                                             $comment_second= $Posts_copyDraft->comments_second($comments['comment_id']);
                                                             if (!empty($comment_second)) { ?>
-                                                            <h5><i>Comments (<?php echo $posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)</i></h5>
+                                                            <h5><i>Comments (<?php echo $Posts_copyDraft->CountsComment_second($comments["comment_id"]); ?>)</i></h5>
                                                             <span id='responseDeletePostSecond'></span>
                                                             <div class="direct-chat-message direct-chat-messageS large-2" >
                                                             <span class="commentsHome" id="commentsHomeSecond<?php echo $comments['comment_id'];?>">
@@ -2506,7 +2506,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                         <div class="direct-chat-msg" id="userComment<?php echo $comments0["comment_id_"]; ?>" >
                                                                             <div class="direct-chat-info clearfix">
                                                                                 <span class="direct-chat-name float-left"><?php echo $comments0["username"] ;?></span>
-                                                                                <span class="direct-chat-timestamp float-right"><?php echo $posts_copyDraft->timeAgo($comments0['comment_at_']); ?></span>
+                                                                                <span class="direct-chat-timestamp float-right"><?php echo $Posts_copyDraft->timeAgo($comments0['comment_at_']); ?></span>
                                                                             </div>
                                                                             <!-- /.direct-chat-info -->
                                                                             <?php if (!empty($comments0["profile_img"])) { ?>
@@ -2516,7 +2516,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
                                                                             <?php } ?>
                                                                             <!-- /.direct-chat-img -->
                                                                             <div class="direct-chat-text">
-                                                                                <?php echo  $posts_copyDraft->getTweetLink($comments0["comment_"]) ;?>
+                                                                                <?php echo  $Posts_copyDraft->getTweetLink($comments0["comment_"]) ;?>
                                                                                  <!-- /.direct-chat-text -->
                                                                                 <ul class="list-inline float-right" style="list-style-type: none; margin-bottom:0;">  
 

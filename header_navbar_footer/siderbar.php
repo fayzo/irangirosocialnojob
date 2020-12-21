@@ -14,7 +14,7 @@
           </div>
           <div class="pull-left info">
             <!-- <p>Alexander Pierce</p> -->
-            <p><?php echo $user['username'];?></p>
+            <p><a href="<?php echo $user['username'];?>"><?php echo $user['username'];?></a></p>
             <a href="#">
               <?php if ($user['chat'] == 'on') { ?>
                       <i class="fa fa-circle text-success"></i>  Online</a>
@@ -38,7 +38,7 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <!-- <li class="header">MAIN NAVIGATION</li> -->
-          <?php if(isset($_SESSION['approval']) && $_SESSION['approval'] === 'on'){ ?>
+          <?php if(isset($_SESSION['key']) && isset($_SESSION['approval']) && $_SESSION['approval'] === 'on'){ ?>
 
           <li class="treeview">
             <a href="#">
@@ -52,10 +52,11 @@
               <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
             </ul>
           </li>
-              <?php } ?>
+
+        <?php } ?>
 
           <li class="treeview">
-            <a href="hashtag.php">
+            <a href="#">
               <i class="fa fa-hashtag"></i> <span>Hashtag</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -68,6 +69,8 @@
               <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li> -->
             </ul>
           </li>
+          <?php if (isset($_SESSION['key'])) { ?>
+
           <li class="treeview">
             <a href="#">
               <i class="fa fa-user"></i> <span>Profile</span>
@@ -77,15 +80,15 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="profile.php"><i class="fa fa-circle-o text-yellow"></i>Profile</a></li>
-              <?php if (isset($_SESSION['key'])) { ?>
+              <li><a href="<?php echo $user['username']; ?>"><i class="fa fa-circle-o text-yellow"></i>Profile</a></li>
               <li><a href="profileEdit.php"><i class="fa fa-circle-o text-yellow"></i> Profile Edit</a></li>
-               <?php } ?>
-
             </ul>
           </li>
+
+          <?php } ?>
+
           <li>
-            <a href="network.php">
+            <a href="<?php echo NETWORK; ?>">
               <i class="fa fa-users"></i> <span>Network</span>
               <span class="pull-right-container" style="margin-right: 10px;">
                 <small class="label pull-right"><i class="fa fa-search"></i></small>

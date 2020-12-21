@@ -83,7 +83,7 @@ $(document).ready(function () {
     $(document).on('click', '.profile-edit-more', function () {
         var user_id = $(this).data('user'); 
         $.ajax({
-            url: 'core/ajax_db/profile_edit_more.php',
+            url: 'core/ajax_db/profile_edit_more',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -95,7 +95,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                     $(".profile-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
 
@@ -165,7 +165,7 @@ function cover_completeUpload(success, cover_Name) {
 //     var t = $('#edit_profile').val();
 //     console.log(t);
 //     $.ajax({
-//         url: 'core/ajax_db/profileEditFectchimage.php',
+//         url: 'core/ajax_db/profileEditFectchimage',
 //         type: 'post',
 //         dataType: 'json',
 //         data: {
@@ -182,7 +182,7 @@ function cover_completeUpload(success, cover_Name) {
 //                 : 'assets/image/users_profile_cover/defaultCoverImage.png';
 //             var cover_userPictureURL = cover_userPicture;
 //             $('.cover_imagePreview').attr('src', cover_userPictureURL);
-//             console.log(response);
+//             // console.log(response);
 //             console.log(userPictureURL);
 //             console.log(cover_userPictureURL);
 //         }
@@ -195,7 +195,7 @@ function careers(key) {
     var career = $("#career");
     var id = $("#id_career");
         $.ajax({
-            url: 'core/ajax_db/profileEditFectchimage.php',
+            url: 'core/ajax_db/profileEditFectchimage',
             method: "POST",
             dataType: "text",
             data: {
@@ -206,7 +206,7 @@ function careers(key) {
                 career: career.val(),
             },
             success: function (response) {
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     // setInterval(function() {
                     //     location.reload();
@@ -228,7 +228,7 @@ function aboutMe(key) {
     var id = $('#id_aboutMe');
 
         $.ajax({
-            url: 'core/ajax_db/profileEditFectchimage.php',
+            url: 'core/ajax_db/profileEditFectchimage',
             method: "POST",
             dataType: "text",
             data: {
@@ -241,7 +241,7 @@ function aboutMe(key) {
                 hobbys: hobbys.val(),
             },
             success: function (response) {
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     // setInterval(function() {
                     //     location.reload();
@@ -263,7 +263,7 @@ function company(key) {
     var id = $('#company_id');
 
         $.ajax({
-            url: 'core/ajax_db/profileEditFectchimage.php',
+            url: 'core/ajax_db/profileEditFectchimage',
             method: "POST",
             dataType: "text",
             data: {
@@ -276,7 +276,7 @@ function company(key) {
                 size_of_people: size_of_people.val(),
             },
             success: function (response) {
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     // setInterval(function() {
                     //     location.reload();

@@ -13,7 +13,7 @@ $(document).ready(function (e) {
         
             if (textarea != '') {
                 $.ajax({
-                    url: "core/ajax_db/message_posts.php",
+                    url: "core/ajax_db/message_posts",
                     method: "POST",
                     data: {
                         key: 'textarea',
@@ -53,7 +53,7 @@ $(document).ready(function (e) {
                 return false;
             } else {
                 $.ajax({
-                    url: "core/ajax_db/message_posts.php",
+                    url: "core/ajax_db/message_posts",
                     method: "POST",
                     data: new FormData(this),
                     contentType: false,

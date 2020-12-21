@@ -4,7 +4,7 @@ $(document).ready(function () {
         var getmessage = 1;
     
         $.ajax({
-            url: 'core/ajax_db/messageStickybottom.php',
+            url: 'core/ajax_db/messageStickybottom',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -14,7 +14,7 @@ $(document).ready(function () {
                 $("#messages").hide();
                 $("#messages1").hide();
                 $("#messages2").hide();
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -23,7 +23,7 @@ $(document).ready(function () {
         var getmessage = 1;
 
         $.ajax({
-            url: 'core/ajax_db/messageStickybottom.php',
+            url: 'core/ajax_db/messageStickybottom',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -33,7 +33,7 @@ $(document).ready(function () {
                 $("#messages").hide();
                 $("#messages1").hide();
                 $("#messages2").hide();
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -43,7 +43,7 @@ $(document).ready(function () {
         // $("#contacts").fadeOut();
 
         $.ajax({
-            url: 'core/ajax_db/messageStickybottom.php',
+            url: 'core/ajax_db/messageStickybottom',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -60,10 +60,10 @@ $(document).ready(function () {
                     } else {
                         autoscroll = true;
                     }
-                    console.log(response);
+                    // console.log(response);
                 });
 
-                console.log(response);
+                // console.log(response);
                 $('.close-chat1').click(function () {
                     clearInterval(timer);
                 });
@@ -77,7 +77,7 @@ $(document).ready(function () {
         $("#contacts").fadeOut();
 
             $.ajax({
-                url: 'core/ajax_db/messageStickybottom.php',
+                url: 'core/ajax_db/messageStickybottom',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -94,7 +94,7 @@ $(document).ready(function () {
                         } else {
                             autoscroll = true;
                         }
-                        console.log(response);
+                        // console.log(response);
                     });
 
                     $('.close-chat1').click(function () {
@@ -123,7 +123,7 @@ $(document).ready(function () {
         $(document).on('click', '.deleteMsg', function () {
             var message_id = $(this).data('message');
             $.ajax({
-                url: 'core/ajax_db/messageStickybottom.php',
+                url: 'core/ajax_db/messageStickybottom',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -131,14 +131,14 @@ $(document).ready(function () {
                 }, success: function (response) {
                     $('#message-del1').html(response);
                     getmessages();
-                    console.log(response);
+                    // console.log(response);
                 }
             });
 
             $(document).on('click', '.delete', function () {
 
                 $.ajax({
-                    url: 'core/ajax_db/messageStickybottom.php',
+                    url: 'core/ajax_db/messageStickybottom',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -146,7 +146,7 @@ $(document).ready(function () {
                     }, success: function (response) {
                         $('.message-delt').hide();
                         getmessages();
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
             });
@@ -158,14 +158,14 @@ $(document).ready(function () {
         $('.message-recent').hide();
         var searching = $(this).val();
         $.ajax({
-            url: 'core/ajax_db/messageStickybottom.php',
+            url: 'core/ajax_db/messageStickybottom',
             method: 'POST',
             dataType: 'text',
             data: {
                 search1: searching,
             }, success: function (response) {
                 $(".message-body").html(response);
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -175,7 +175,7 @@ $(document).ready(function () {
         var get_id = $(this).data('user');
 
         $.ajax({
-            url: 'core/ajax_db/messageStickybottom.php',
+            url: 'core/ajax_db/messageStickybottom',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -185,7 +185,7 @@ $(document).ready(function () {
             success: function (response) {
                 getmessages();
                 $("#msg").val('');
-                console.log(response);
+                // console.log(response);
             }
         });
     });

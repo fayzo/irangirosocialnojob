@@ -2,7 +2,7 @@ $(document).ready(function() {
     notification = function () {
         
         $.ajax({
-            url: 'core/ajax_db/notification.php',
+            url: 'core/ajax_db/notification',
             method: 'GET',
             dataType: 'json',
             data: {
@@ -19,7 +19,7 @@ $(document).ready(function() {
                         $('#messages').html(response.messages);
                     }
                 }
-                console.log(response);
+                // console.log(response);
             }
         });
     };

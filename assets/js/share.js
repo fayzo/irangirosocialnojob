@@ -7,7 +7,7 @@ $(document).ready(function() {
        $button= $(this);
 
          $.ajax({
-                    url: 'core/ajax_db/share.php',
+                    url: 'core/ajax_db/share',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -19,7 +19,7 @@ $(document).ready(function() {
                              $('.retweet-popup').hide();
                         });
 
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
       });
@@ -28,7 +28,7 @@ $(document).ready(function() {
        $comment = $('.retweetMsg').val();
 
          $.ajax({
-                    url: 'core/ajax_db/share.php',
+                    url: 'core/ajax_db/share',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -41,7 +41,7 @@ $(document).ready(function() {
                         $counter.text($count++);
                         $button.removeClass('.retweet').addClass('.retweeted');
 
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
       });

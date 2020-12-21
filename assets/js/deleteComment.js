@@ -6,7 +6,7 @@ $(document).ready(function (e) {
         var comment_by = $(this).data('user');
 
         $.ajax({
-            url: 'core/ajax_db/deletePost.php',
+            url: 'core/ajax_db/deletePost',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -19,7 +19,7 @@ $(document).ready(function (e) {
                 });
                 $(".delete-it").click(function () {
                     $.ajax({
-                        url: 'core/ajax_db/deletePost.php',
+                        url: 'core/ajax_db/deletePost',
                         method: 'POST',
                         dataType: 'text',
                         data: {
@@ -33,12 +33,12 @@ $(document).ready(function (e) {
                             setInterval(function() {
                                 location.reload();
                             }, 1100);
-                            console.log(response);
+                            // console.log(response);
                         }
 
                     });
                 });
-                console.log(response);
+                // console.log(response);
             }
 
         });
@@ -50,7 +50,7 @@ $(document).ready(function (e) {
         var comment_id = $(this).data('comment');
 
         $.ajax({
-            url: 'core/ajax_db/deleteComment.php',
+            url: 'core/ajax_db/deleteComment',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -61,7 +61,7 @@ $(document).ready(function (e) {
                 $(".tweet-show-popup-box-cut").click(function () {
                     $(".tweet-show-popup-wrap").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -72,7 +72,7 @@ $(document).ready(function (e) {
         var comment_by = $(this).data('user');
 
         $.ajax({
-            url: 'core/ajax_db/deleteCommentPost.php',
+            url: 'core/ajax_db/deleteCommentPost',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -85,7 +85,7 @@ $(document).ready(function (e) {
                 });
                 $(".delete-its").click(function () {
                     $.ajax({
-                        url: 'core/ajax_db/deleteCommentPost.php',
+                        url: 'core/ajax_db/deleteCommentPost',
                         method: 'POST',
                         dataType: 'text',
                         data: {
@@ -98,12 +98,12 @@ $(document).ready(function (e) {
                             setInterval(function() {
                                 location.reload();
                             }, 1100);
-                            console.log(response);
+                            // console.log(response);
                         }
 
                     });
                 });
-                console.log(response);
+                // console.log(response);
             }
 
         });
@@ -116,7 +116,7 @@ $(document).ready(function (e) {
         var comment_by = $(this).data('user');
 
                 $.ajax({
-                    url: 'core/ajax_db/posts_comments.php',
+                    url: 'core/ajax_db/posts_comments',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -131,7 +131,7 @@ $(document).ready(function (e) {
                         setInterval(function() {
                             // location.reload();
                         }, 1100);
-                        console.log(response);
+                        // console.log(response);
                     }
 
                 });
@@ -144,7 +144,7 @@ $(document).ready(function (e) {
         var comment_by = $(this).data('user');
 
                 $.ajax({
-                    url: 'core/ajax_db/posts_comments.php',
+                    url: 'core/ajax_db/posts_comments',
                     method: 'POST',
                     dataType: 'text',
                     data: {
@@ -159,7 +159,7 @@ $(document).ready(function (e) {
                         setInterval(function() {
                             // location.reload();
                         }, 1100);
-                        console.log(response);
+                        // console.log(response);
                     }
 
                 });
