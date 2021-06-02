@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2020 at 06:03 PM
+-- Generation Time: Jun 03, 2021 at 12:42 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `irangiro_social`
+-- Database: `irangiro_social_site_no_job`
 --
 
 -- --------------------------------------------------------
@@ -285,8 +285,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `username`, `email`, `password`, `gender`, `chat`, `career`, `country`, `date_birth`, `date_registry`, `last_login`, `last_profile_edit`, `counts_login`, `forgotUsernameCounts`, `forgotUsernameCountsTimesHeCreates`, `forgotUsernameCountsTimesHeCreatespassword`, `profile_img`, `profile_img_crop`, `cover_img`, `background`, `language`, `color`, `education`, `diploma`, `skills`, `location`, `hobbys`, `followers`, `following`, `approval`, `countViewin_profile`, `company_education`, `type_of_business`, `address`, `size_of_people`, `companyname`, `overview`, `history`, `team`, `legal_structure`, `location_facilities`, `mission_statement`, `website`, `unemployment`, `categories_fields`, `phone`, `about`, `province`, `districts`, `sector`, `cell`, `village`, `primary_education`, `primary_date_start`, `primary_date_end`, `secondary_education`, `secondary_date_start`, `secondary_date_end`, `university_education`, `university_date_start`, `university_date_end`, `experience_date_start`, `experience_working`, `experience_duties`, `experience_field`, `experience_field1`, `experience_field2`) VALUES
-(1, 'irangiro', 'social', 'irangiro', 'irangiroltd@gmail.com', 'fafa', 'Male', 'off', '', 'RW', '1999-08-03', '2020-12-06', '2020-12-07 18:00:43', '0000-00-00 00:00:00', 3, 0, 0, 0, '116vect.png', '', '529port.jpg', '', '', 'black', '', '', '', '', '', 0, 0, 'off', 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', ''),
-(2, 'Tips', 'Mindseet', 'Tips', 'admin@irangiro.com', 'fafa', 'Male', 'off', '', 'RW', '1999-08-03', '2020-12-07', '2020-12-07 17:58:15', '0000-00-00 00:00:00', 2, 0, 0, 0, '784port.jpg', '', '153img6.jpg', '', '', 'black', '', '', '', '', '', 0, 0, 'off', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', '');
+(1, 'irangiro', 'social', 'irangiro', 'irangiroltd@gmail.com', 'fafa', 'Male', 'off', '', 'RW', '1999-08-03', '2020-12-06', '2021-05-16 11:29:42', '0000-00-00 00:00:00', 6, 0, 0, 0, '116vect.png', '', '529port.jpg', '', '', 'black', '', '', '', '', '', 0, 0, 'off', 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', ''),
+(2, 'Tips', 'Mindseet', 'Tips', 'admin@irangiro.com', 'fafa', 'Male', 'off', '', 'RW', '1999-08-03', '2020-12-07', '2020-12-07 17:58:15', '0000-00-00 00:00:00', 2, 0, 0, 0, '784port.jpg', '', '153img6.jpg', '', '', 'black', '', '', '', '', '', 0, 0, 'off', 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -372,19 +372,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `album`
 --
 ALTER TABLE `album`
-  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `follow`
 --
 ALTER TABLE `follow`
-  MODIFY `follow_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `follow_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `likes`
@@ -396,31 +396,31 @@ ALTER TABLE `likes`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `message_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `message_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `notification`
 --
 ALTER TABLE `notification`
-  MODIFY `notification_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `notification_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `post_comment`
 --
 ALTER TABLE `post_comment`
-  MODIFY `comment_id_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `comment_id_` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `post_dislike`
 --
 ALTER TABLE `post_dislike`
-  MODIFY `like_id_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `like_id_` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `post_like`
 --
 ALTER TABLE `post_like`
-  MODIFY `like_id_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `like_id_` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `trends`
@@ -432,13 +432,13 @@ ALTER TABLE `trends`
 -- AUTO_INCREMENT for table `tweets`
 --
 ALTER TABLE `tweets`
-  MODIFY `tweet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `tweet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

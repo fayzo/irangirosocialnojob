@@ -19,8 +19,8 @@ include('class/Posts_copyDraft.php');
 include('class/Post_home.php');
 
 
-define('BASE_URL_PUBLIC', 'http://localhost/irangiro_social_site/');
-define('BASE_URL_LINK', 'http://localhost/irangiro_social_site/assets/');
+define('BASE_URL_PUBLIC', 'http://localhost/irangiro_social_site_no_job/');
+define('BASE_URL_LINK', 'http://localhost/irangiro_social_site_no_job/assets/');
 
 
 define('F_INDEX', BASE_URL_PUBLIC.'irangiro.home');
@@ -34,7 +34,7 @@ define('FORGET_PASSPOWRD', BASE_URL_PUBLIC.'include/forgotpassword');
 define('CREATE_PASSPOWRD', BASE_URL_PUBLIC.'include/createpassword');
 
 // UPLOAD PHOTO
-define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'].'/irangiro_social_site');
+define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'].'/irangiro_social_site_no_job');
 // UPLOAD PHOTO
 
 // END SETTING FILE

@@ -1824,8 +1824,8 @@ class Home extends Comment {
         $stmt->bind_param('i',$retweet_id);
         $stmt->execute();
 
-        $query= "INSERT INTO tweets (status, tweetBy, retweet_id, retweet_by, tweet_image, likes_counts, retweet_counts, posted_on, retweet_Msg) 
-        SELECT status, tweetBy, ?, ?, tweet_image, likes_counts, retweet_counts, ? , ?  FROM tweets WHERE tweet_id= ? ";
+        $query= "INSERT INTO tweets (status,title_name,photo_Title_main,photo_Title, tweetBy, retweet_id, retweet_by, tweet_image, likes_counts, retweet_counts, posted_on, retweet_Msg) 
+        SELECT status,title_name,photo_Title_main,photo_Title, tweetBy, ?, ?, tweet_image, likes_counts, retweet_counts, ? , ?  FROM tweets WHERE tweet_id= ? ";
         $stmt->prepare($query);
         $time = date('Y-m-d H-i-s');
         $stmt->bind_param('iissi', $retweet_id, $user_id,$time,$comments, $retweet_id);
@@ -1846,34 +1846,51 @@ class Home extends Comment {
      public function checkRetweet($tweet_id,$user_id)
     {
         $mysqli= $this->database;
-        $stmt = $mysqli->stmt_init();
-        $query="SELECT * FROM tweets WHERE retweet_id= ?  AND retweet_by= ? OR tweet_id=? AND retweet_by=? ";
-        $stmt->prepare($query);
-        $stmt->bind_param('iiii', $tweet_id, $user_id, $tweet_id, $user_id);
-        $stmt->bind_result($tweet_idd, $status, $tweetBy, $retweet_idd, $retweet_by, $tweet_image,$tweet_size,
-        $likes_counts, $retweet_counts, $posted_on, $retweet_msg);
-        $stmt->execute();
+        // $stmt = $mysqli->stmt_init();
+        // $query="SELECT * FROM tweets WHERE retweet_id= $tweet_id  AND retweet_by= $user_id OR tweet_id= $tweet_id AND retweet_by= $user_id ";
+        $query="SELECT * FROM tweets WHERE retweet_id= '$tweet_id'  AND retweet_by= '$user_id' OR tweet_id= '$tweet_id' AND retweet_by= '$user_id' ";
+        $result= $mysqli->query($query);
         $CountRetweet= array();
-        while ($stmt->fetch()) {
-             $CountRetweet[] = array(
-              /* TABLE OF tweety */
-             "tweet_id" => $tweet_idd,
-             "status" => $status,
-             "tweetBy" => $tweetBy,
-             "retweet_id" => $retweet_idd,
-             "retweet_by" => $retweet_by,
-             "tweet_image" => $tweet_image,
-             "tweet_image_size" => $tweet_size,
-             "likes_counts" => $likes_counts,
-             "retweet_counts" => $retweet_counts,
-             "posted_on" => $posted_on,
-             "retweet_Msg" => $retweet_msg,
-           );
+        while ($row= $result->fetch_array()) {
+             $CountRetweet[] = $row;
         }
+        
         foreach ($CountRetweet as $countsRetweet) {
             # code...
             return $countsRetweet; // Return the $contacts array
         }
+        
+        // $query="SELECT * FROM tweets WHERE retweet_id= ?  AND retweet_by= ? OR tweet_id= ? AND retweet_by= ? ";
+        // $stmt->prepare($query);
+        // $stmt->bind_param('iiii', $tweet_id, $user_id, $tweet_id, $user_id);
+        // $stmt->bind_result($tweet_idd, $status,$title_name,$photo_Title_main,$photo_Title,
+        //  $tweetBy, $retweet_idd, $retweet_by, $tweet_image,$tweet_size,
+        // $likes_counts, $retweet_counts, $posted_on, $retweet_msg);
+        // $stmt->execute();
+        // $CountRetweet= array();
+        // while ($stmt->fetch()) {
+        //      $CountRetweet[] = array(
+        //       /* TABLE OF tweety */
+        //      "tweet_id" => $tweet_idd,
+        //      "status" => $status,
+        //      "title_name" => $title_name,
+        //      "photo_Title_main" => $photo_Title_main,
+        //      "photo_Title" => $photo_Title,
+        //      "tweetBy" => $tweetBy,
+        //      "retweet_id" => $retweet_idd,
+        //      "retweet_by" => $retweet_by,
+        //      "tweet_image" => $tweet_image,
+        //      "tweet_image_size" => $tweet_size,
+        //      "likes_counts" => $likes_counts,
+        //      "retweet_counts" => $retweet_counts,
+        //      "posted_on" => $posted_on,
+        //      "retweet_Msg" => $retweet_msg,
+        //    );
+        // }
+        // foreach ($CountRetweet as $countsRetweet) {
+        //     # code...
+        //     return $countsRetweet; // Return the $contacts array
+        // }
 
     }
 

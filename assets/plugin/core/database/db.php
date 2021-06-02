@@ -18,11 +18,11 @@ class Db
         $dbHost = "localhost";
         $dbUsername = "root";
         $dbPassword = "";
-        $dbName = "irangiro_social";
+        $dbName = "irangiro_social_site_no_job";
         $dbport = "3306";
         // $conn = new mysqli( 'localhost','fayzo','fayzo123','retrieve_data','3306');
         $this->connection = new Mysqli($dbHost, $dbUsername, $dbPassword, $dbName,$dbport);
-
+        
         if (mysqli_connect_errno()) {
             die("database connection failed:" . mysqli_connect_error() . "(" . mysqli_connect_errno() . ")");
         } else {
